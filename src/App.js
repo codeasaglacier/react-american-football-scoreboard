@@ -12,10 +12,10 @@ function App() {
 
   // const [timer, setTimer] = useState(0)
 
-  // const [away, setAway] = useState('Away')
+  const away = "Tigers";
 
   const homeTD = () => {
-    setHScore(hScore + 6)
+    setHScore(hScore + 7)
   }
   
   const homeFG = () => {
@@ -23,12 +23,16 @@ function App() {
   }
 
   const awayTD = () => {
-    setAScore(hScore + 6)
+    setAScore(aScore + 7)
   }
   
   const awayFG = () => {
-    setAScore(hScore + 3)
+    setAScore(aScore + 3)
   }
+
+  // const awayTeam = () => {
+  //   setAway()
+  // }
 
   return (
     <div className="container">
@@ -43,7 +47,7 @@ function App() {
           </div>
           <div className="timer">00:03</div>
           <div className="away">
-            <h2 className="away__name">Tigers</h2>
+            <h2 className="away__name">{away}</h2>
             <div className="away__score">{aScore}</div>
           </div>
         </div>
