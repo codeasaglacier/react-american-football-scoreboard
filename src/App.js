@@ -65,31 +65,34 @@ function App() {
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
             <div className="home__score">{hScore}</div>
+            <button className="homeButtons__touchdown" onClick = {homeTD}>Lions Touchdown</button>
+            <button className="homeButtons__fieldGoal" onClick = {homeFG}>Lions Field Goal</button>
           </div>
           <div className="timer">< Timer /></div>
           <div className="away">
             <h2 className="away__name">{away}</h2>
             <div className="away__score">{aScore}</div>
+            <button className="awayButtons__touchdown" onClick = {awayTD}>{away} Touchdown</button>
+          <button className="awayButtons__fieldGoal" onClick = {awayFG}>{away} Field Goal</button>
           </div>
         </div>
         <BottomRow down = {down} quarter = {quarter} />
+        <button className = 'awayButtons__touchdown' onClick = {nextDown}>Down</button>
+        <button className = 'awayButtons__touchdown' onClick = {nextQuarter}>Quarter</button>
       </section>
       <section className="buttons">
         <div className="homeButtons">
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
 
-          <button className="homeButtons__touchdown" onClick = {homeTD}>Lions Touchdown</button>
-          <button className="homeButtons__fieldGoal" onClick = {homeFG}>Lions Field Goal</button>
+          
           
         </div>
         <div className="awayButtons">
-          <button className="awayButtons__touchdown" onClick = {awayTD}>{away} Touchdown</button>
-          <button className="awayButtons__fieldGoal" onClick = {awayFG}>{away} Field Goal</button>
+         
           
         </div>
         <div>
-        <button className = 'awayButtons__touchdown' onClick = {nextDown}>Down</button>
-        <button className = 'awayButtons__touchdown' onClick = {nextQuarter}>Quarter</button>
+        
         </div>
 
       </section>
